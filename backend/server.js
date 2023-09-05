@@ -19,7 +19,7 @@ app.get("/artists", async (request, response) => {
 app.get("/artists/:id", async (request, response) => {
   const id = Number(request.params.id);
   console.log(id);
-  const data = await fs.readFile("artists.json");
+  const data = await fs.readFile("backend/artists.json");
   const artists = JSON.parse(data);
   const result = artists.find((artist) => artist.id == id);
   response.json(result);
@@ -28,7 +28,7 @@ app.get("/artists/:id", async (request, response) => {
 app.post("/artists", async (request, response) => {
   const newArtist = request.body;
   newArtist.id = new Date().getTime();
-  const data = await fs.readFile("artists.json");
+  const data = await fs.readFile("backend/artists.json");
   const artists = JSON.parse(data);
   artists.push(newArtist);
   fs.writeFile("artists.json", JSON.stringify(artists));
@@ -38,7 +38,7 @@ app.post("/artists", async (request, response) => {
 app.put("/artists/:id", async (request, response) => {
   const id = request.params.id;
 
-  const data = await fs.readFile("artists.json");
+  const data = await fs.readFile("backend/artists.json");
   const artists = JSON.parse(data);
   // const sortedArtists = artists.sort((a, b) => a.name.localeCompare(b.name));
   let artistToUpdate = artists.find((artist) => artist.id == id);
@@ -55,7 +55,7 @@ app.put("/artists/:id", async (request, response) => {
 
   console.log(body);
   console.log(artists);
-  fs.writeFile("artists.json", JSON.stringify(artists));
+  fs.writeFile("backend/artists.json", JSON.stringify(artists));
   response.json(artists);
 });
 
@@ -63,12 +63,12 @@ app.delete("/artists/:id", async (request, response) => {
   const id = request.params.id;
   console.log(id);
 
-  const data = await fs.readFile("artists.json");
+  const data = await fs.readFile("backend/artists.json");
   const artists = JSON.parse(data);
 
   const newArtists = artists.filter((artist) => artist.id != id);
 
-  fs.writeFile("artists.json", JSON.stringify(newArtists));
+  fs.writeFile("backend/artists.json", JSON.stringify(newArtists));
 
   response.json(artists);
 });
