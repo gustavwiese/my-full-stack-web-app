@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GrooveGrid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>GrooveGrid</header>
+    <div class="filter-grid">
+      <div>
+        <button id="create-artist-btn">create artist</button>
+      </div>
+
+      <div>
+        <label for="filter">Filter:</label>
+        <select id="filterByGenre" class="sort">
+          <option value="" selected>Genre</option>
+          <option value="pop">Pop</option>
+          <option value="soul">Soul</option>
+          <option value="rock">Rock</option>
+          <option value="hiphop">HipHop</option>
+          <option value="folk">Folk</option>
+          <option value="alternative">Alternative</option>
+          <option value="R&B">R&B</option>
+          <option value="rap">Rap</option>
+          <option value="funk">Funk</option>
+          <option value="indie">Indie</option>
+          <option value="reggae">Reggae</option>
+        </select>
+        <label for="sort">Sort:</label>
+        <select id="sortBy" class="sort">
+          <option value="default" selected>A-Z</option>
+          <option value="reverse">Z-A</option>
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <h2>Favorites</h2>
+      <section class="grid-container" id="favorites"></section>
+    </div>
+
+    <div>
+      <h2>All artists</h2>
+      <section id="artists-grid" class="grid-container"></section>
+    </div>
+    <footer>bla bla bla</footer>
+
+    <!-- CREATE DIALOG-->
+    <dialog id="dialog-create-artist">
+      <form method="dialog">
+        <button id="dialog-close-btn">X</button>
+      </form>
+      <h2>Add artist:</h2>
+      <form id="form-create-artist" method="dialog">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="create-name"
+          name="name"
+          placeholder="What is the stage name of artist"
+          required
+        />
+        <label for="birthdate">Birthdate:</label>
+        <input
+          type="date"
+          id="create-birthdate"
+          name="birthdate"
+          placeholder="What is the brithdate of artist"
+          required
+        />
+        <label for="age">Active since:</label>
+        <input
+          type="text"
+          id="create-active-since"
+          name="activeSince"
+          placeholder="What year was the artist first active"
+          required
+        />
+        <label for="label">Label:</label>
+        <input
+          type="text"
+          id="create-label"
+          name="label"
+          placeholder="What label is the artist under"
+          required
+        />
+        <label for="website">Website:</label>
+        <input
+          type="url"
+          id="create-website"
+          name="website"
+          placeholder="What is the artists website"
+          required
+        />
+        <label for="genres">Genres:</label>
+        <select name="genres" id="create-genres">
+          <option value="" selected>genre</option>
+          <option value="pop">Pop</option>
+          <option value="soul">Soul</option>
+          <option value="rock">Rock</option>
+          <option value="hiphop">HipHop</option>
+          <option value="folk">Folk</option>
+          <option value="alternative">Alternative</option>
+          <option value="R&B">R&B</option>
+          <option value="rap">Rap</option>
+          <option value="funk">Funk</option>
+          <option value="indie">Indie</option>
+          <option value="reggae">Reggae</option>
+        </select>
+        <div class="grid2rows">
+          <label for="extra-genre">Tilføj/fjern</label>
+          <div>
+            <button type="button" id="extra-genre-btn-create">+</button>
+            <button type="button" id="remove-genre-btn-create">-</button>
+          </div>
+        </div>
+        <output id="genre-output-create" name="genre"></output>
+        <label for="description">Short description: </label>
+        <input
+          type="text"
+          id="create-description"
+          name="description"
+          placeholder="Write a short description of the artist"
+        />
+        <label for="image">Image: </label>
+        <input
+          type="url"
+          id="create-image"
+          name="image"
+          placeholder="Paste image url here"
+          required
+        />
+        <button id="form-create-btn">Create artist</button>
+      </form>
+    </dialog>
+
+    <!-- UPDATE DIALOG-->
+    <dialog id="dialog-update-artist">
+      <form>
+        <button id="dialog-close-btn">X</button>
+      </form>
+      <h2>Edit artist</h2>
+      <form id="form-update" method="dialog">
+        <button id="dialog-close-btn">X</button>
+      </form>
+      <h2></h2>
+      <form id="form-edit-artist" method="dialog">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="edit-name"
+          name="name"
+          placeholder="Edit stage name"
+          required
+        />
+        <label for="birthdate">Birthdate:</label>
+        <input
+          type="text"
+          id="edit-birthdate"
+          name="birthdate"
+          placeholder="Edit brithdate of artist"
+          required
+        />
+        <label for="active since">Active since:</label>
+        <input
+          type="text"
+          id="edit-active-since"
+          name="activeSince"
+          placeholder="Edit when the artist first active"
+          required
+        />
+        <label for="label">Label:</label>
+        <input
+          type="text"
+          id="create-label"
+          name="label"
+          placeholder="Edit label is the artist under"
+          required
+        />
+        <label for="website">Website:</label>
+        <input
+          type="url"
+          id="edit-website"
+          name="website"
+          placeholder="Edit the artists website"
+          required
+        />
+        <label for="genres">Genres:</label>
+        <select name="genres" id="edit-genres">
+          <option value="" selected>genre</option>
+          <option value="pop">Pop</option>
+          <option value="soul">Soul</option>
+          <option value="rock">Rock</option>
+          <option value="hiphop">HipHop</option>
+          <option value="folk">Folk</option>
+          <option value="alternative">Alternative</option>
+          <option value="R&B">R&B</option>
+          <option value="rap">Rap</option>
+          <option value="funk">Funk</option>
+          <option value="indie">Indie</option>
+          <option value="reggae">Reggae</option>
+        </select>
+        <div class="grid2rows">
+          <label for="extra-genre">Tilføj/fjern</label>
+          <div>
+            <button type="button" id="extra-genre-btn-edit">+</button>
+            <button type="button" id="remove-genre-btn-edit">-</button>
+          </div>
+        </div>
+        <output id="genre-output-edit" name="genreOutput"></output>
+        <label for="description">Short description: </label>
+        <input
+          type="text"
+          id="edit-description"
+          name="description"
+          placeholder="Edit the description of the artist"
+          required
+        />
+        <label for="image">Image: </label>
+        <input
+          type="url"
+          id="edit-image"
+          name="image"
+          placeholder="Paste image url here"
+          required
+        />
+        <button type="submit" id="form-update-btn">Update artist</button>
+      </form>
+    </dialog>
+
+    <!--DELETE DIALOG-->
+    <dialog id="dialog-delete-artist">
+      <h2>Are you sure you would like to delete the artist?</h2>
+      <p id="dialog-delete-artist-name"></p>
+      <form action="" id="form-delete-artist">
+        <div id="delete-grid">
+          <input id="btn-yes" type="submit" value="Yes" />
+          <input id="btn-no" type="button" value="No" />
+        </div>
+      </form>
+    </dialog>
+    <div id="snackbar"></div>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
