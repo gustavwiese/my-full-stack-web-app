@@ -5,7 +5,7 @@ import { displayArtists, addGenreToOutput, removeGenreToOutput, displayFavorites
 let selectedArtist;
 let globalArtists;
 
-const endpoint = "http://localhost:1989";
+const endpoint = "http://localhost:2001";
 
 async function readArtists() {
   const response = await fetch(`${endpoint}/artists`);
