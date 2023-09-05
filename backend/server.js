@@ -7,11 +7,11 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (request, response) => {
-  response.send("Hello express.js 🤠");
+  response.send("Hejsa server😍");
 });
 
 app.get("/artists", async (request, response) => {
-  const data = await fs.readFile("artists.json");
+  const data = await fs.readFile("backend/artists.json");
   const artists = JSON.parse(data);
   const sortedArtists = artists.sort((a, b) => a.name.localeCompare(b.name));
   response.json(sortedArtists);

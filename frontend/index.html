@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GrooveGrid</title>
+    <title>GG - Gustavs Grooves</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>GrooveGrid</header>
+    <header>GG - GustavsGrooves</header>
     <div class="filter-grid">
       <div>
         <button id="create-artist-btn">create artist</button>
@@ -56,13 +56,7 @@
       <h2>Add artist:</h2>
       <form id="form-create-artist" method="dialog">
         <label for="name">Name:</label>
-        <input
-          type="text"
-          id="create-name"
-          name="name"
-          placeholder="What is the stage name of artist"
-          required
-        />
+        <input type="text" id="create-name" name="name" placeholder="What is the stage name of artist" required />
         <label for="birthdate">Birthdate:</label>
         <input
           type="date"
@@ -80,21 +74,9 @@
           required
         />
         <label for="label">Label:</label>
-        <input
-          type="text"
-          id="create-label"
-          name="label"
-          placeholder="What label is the artist under"
-          required
-        />
+        <input type="text" id="create-label" name="label" placeholder="What label is the artist under" required />
         <label for="website">Website:</label>
-        <input
-          type="url"
-          id="create-website"
-          name="website"
-          placeholder="What is the artists website"
-          required
-        />
+        <input type="url" id="create-website" name="website" placeholder="What is the artists website" required />
         <label for="genres">Genres:</label>
         <select name="genres" id="create-genres">
           <option value="" selected>genre</option>
@@ -126,13 +108,7 @@
           placeholder="Write a short description of the artist"
         />
         <label for="image">Image: </label>
-        <input
-          type="url"
-          id="create-image"
-          name="image"
-          placeholder="Paste image url here"
-          required
-        />
+        <input type="url" id="create-image" name="image" placeholder="Paste image url here" required />
         <button id="form-create-btn">Create artist</button>
       </form>
     </dialog>
@@ -149,21 +125,9 @@
       <h2></h2>
       <form id="form-edit-artist" method="dialog">
         <label for="name">Name:</label>
-        <input
-          type="text"
-          id="edit-name"
-          name="name"
-          placeholder="Edit stage name"
-          required
-        />
+        <input type="text" id="edit-name" name="name" placeholder="Edit stage name" required />
         <label for="birthdate">Birthdate:</label>
-        <input
-          type="text"
-          id="edit-birthdate"
-          name="birthdate"
-          placeholder="Edit brithdate of artist"
-          required
-        />
+        <input type="text" id="edit-birthdate" name="birthdate" placeholder="Edit brithdate of artist" required />
         <label for="active since">Active since:</label>
         <input
           type="text"
@@ -173,21 +137,9 @@
           required
         />
         <label for="label">Label:</label>
-        <input
-          type="text"
-          id="create-label"
-          name="label"
-          placeholder="Edit label is the artist under"
-          required
-        />
+        <input type="text" id="create-label" name="label" placeholder="Edit label is the artist under" required />
         <label for="website">Website:</label>
-        <input
-          type="url"
-          id="edit-website"
-          name="website"
-          placeholder="Edit the artists website"
-          required
-        />
+        <input type="url" id="edit-website" name="website" placeholder="Edit the artists website" required />
         <label for="genres">Genres:</label>
         <select name="genres" id="edit-genres">
           <option value="" selected>genre</option>
@@ -220,13 +172,7 @@
           required
         />
         <label for="image">Image: </label>
-        <input
-          type="url"
-          id="edit-image"
-          name="image"
-          placeholder="Paste image url here"
-          required
-        />
+        <input type="url" id="edit-image" name="image" placeholder="Paste image url here" required />
         <button type="submit" id="form-update-btn">Update artist</button>
       </form>
     </dialog>
