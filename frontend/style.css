@@ -116,11 +116,11 @@ footer {
   grid-area: 1 / 2 / 2 / 3;
   margin: 0;
   padding: 0;
-  background-color: #ffe5ec;
+  background-color: #388e3c;
 }
 .cancel-btn {
   border-radius: 100%;
-  background-color: #ffe5ec;
+  background-color: #388e3c;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
@@ -137,9 +137,9 @@ footer {
 /* grid item styling */
 
 .grid-item {
-  box-shadow: 1px 1px 8px #ffe5ec;
+  box-shadow: 1px 1px 8px;
   padding: 1.5em;
-  background-color: #ffc2d1;
+  background-color: #dce775;
   transition: 0.5s;
   animation: fadeIn 0.5s;
   border-radius: 15%;
@@ -147,7 +147,7 @@ footer {
 .grid-item-2 {
   box-shadow: 1px 1px 8px FF8FAB;
   padding: 1.5em;
-  background-color: #ffc2d1;
+  background-color: #dce775;
   transition: 0.5s;
   animation: fadeIn 0.5s;
   border-radius: 2.5%;
@@ -163,7 +163,7 @@ footer {
 .grid-item-user {
   box-shadow: 1px 1px 8px;
   padding: 0.85em;
-  background-color: #ffc2d1;
+  background-color: #dce775;
   transition: 0.5s;
   animation: fadeIn 0.5s;
   border-radius: 1em;
