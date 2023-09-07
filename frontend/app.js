@@ -80,9 +80,9 @@ function displayArtists(list) {
                 <a href="${artist.website}">Artist website</a>
     
                 <div class="btns">
-                    <button class="btn-update">Edit</button>
-                    <button class="btn-delete">Delete</button>
-                    <button class="btn-favorite">add to fave</button>
+                    <button class="btn-update">edit</button>
+                    <button class="btn-delete">delete</button>
+                    <button class="btn-favorite">add to favorites</button>
                 </div> 
             </article>
         `
