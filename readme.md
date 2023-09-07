@@ -1,17 +1,19 @@
-Download og naviger til "full-stack-web-app".
+Åbn projektet med VS-Code
 
-Initialiser Node.js, express og cors ved at køre følgende kommandoer i terminalen:
+Installer Node.js, express og cors ved at køre følgende kommandoer i terminalen:
 
 npm install express
 
 npm install cors
 
-I terminalen vær sikker på du er i "backend" folder. Når du er der skriv følgende i terminalen
+I terminalen skal du være sikker på du er i "backend" folder. Når du er der skriv følgende i terminalen
 
-node --watch app.js
+node app.js 
 
-Du kan eventuelt åbne "http://localhost:2001/artists" for at teste om den virker.
+Det starter serveren
 
-Start live server og naviger til "frontend" folder ved hjælp af VS code extensionen "Live Server"
+Du kan eventuelt åbne "http://localhost:2001" for at teste om den virker.
 
-Herefter burde hjemmesiden blive vist på live server
+Start live-server via HTML-filen
+
+Herefter burde hjemmesiden blive vist på browseren
